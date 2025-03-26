@@ -59,7 +59,7 @@ To run the code in this repository, you will need the following:
 2. **Normalizing BAM to BigWig**:
    - Use the `normalize_bam_to_bw.sh` script to normalize BAM files and generate BigWig files. Example usage:
      ```bash
-     ./normalize_bam_to_bw.sh --input-bam sample.bam --output-bw sample.bw --scale-factor 0.5 --bin-size 50
+     ./normalize_bam_to_bw.sh --input-bam sample.bam --output-bw sample.bw --scale-factor 1 --bin-size 25
      ```
 
 ### Additional Notes

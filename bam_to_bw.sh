@@ -22,7 +22,7 @@
 #       --input-bam sample.bam \\
 #       --output-bw sample.bw \\
 #       --scale-factor 0.5 \\
-#       --bin-size 50
+#       --bin-size 25
 #
 
 # Default values
@@ -71,7 +71,7 @@ done
 # Check required arguments
 if [ -z "$INPUT_BAM" ] || [ -z "$OUTPUT_BW" ] || [ -z "$SCALE_FACTOR" ]; then
     echo "Missing required arguments!"
-    echo "Usage example: ./normalize_bam_to_bw.sh -i sample.bam -o sample.bw -s 0.5"
+    echo "Usage example: ./normalize_bam_to_bw.sh -i sample.bam -o sample.bw -s 1"
     exit 1
 fi
 

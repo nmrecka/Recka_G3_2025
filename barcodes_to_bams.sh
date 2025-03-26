@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing the _barcodes.txt files.
-BARCODES_DIR="/Users/nmrecka/projects/CTRL_only/BARCODES"
+BARCODES_DIR="/Users/nmrecka/projects/CTRL_only/Barcodes"
 
 # The input BAM file (assumes it contains a CB tag for cell barcodes).
 INPUT_BAM="/Users/nmrecka/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/gex_possorted_bam.bam"
