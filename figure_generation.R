@@ -11,6 +11,8 @@ library(hdf5r)
 library(EnhancedVolcano)
 set.seed(1234)
 
+ctrl <- readRDS("~/hpchome/projects/CTRL_only/CTRL_only/Loadable Data/ctrl.rds")
+
 ##########Figure 2##########
 FeaturePlot(ctrl, features = c("Egfr"), split.by = "orig.ident", pt.size = 0.5, reduction = "wnn.umap")
 ggsave("Egfr_expression.tiff", width = 8, height = 8, units = c("in"), dpi = 300)

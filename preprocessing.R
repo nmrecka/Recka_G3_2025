@@ -11,8 +11,14 @@ library(hdf5r)
 library(EnhancedVolcano)
 set.seed(1234)
 
+PATH_ATAC_PEAKS = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/ctrl_atac_peaks.bed"
+PATH_BARCODE_METRICS = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/per_barcode_metrics.csv"
+PATH_ATAC_FRAGMENTS = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/atac_fragments.tsv.gz"
+PATH_RNA = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/filtered_feature_bc_matrix.h5"
+OUTPUT_RDS = "~/hpchome/projects/CTRL_only/CTRL_only/Loadable Data/ctrl.rds"
+
 #Read in peak sets
-ctrl.peaks <- read.table(file = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/ctrl_atac_peaks.bed", col.names = c("chr", "start", "end"))
+ctrl.peaks <- read.table(file = PATH_ATAC_PEAKS, col.names = c("chr", "start", "end"))
 
 #Convert to genomic ranges
 ctrl.gr <- makeGRangesFromDataFrame(ctrl.peaks)
@@ -22,10 +28,10 @@ peakwidths <- width(ctrl.gr)
 ctrl.gr <- ctrl.gr[peakwidths < 10000 & peakwidths > 20]
 
 #Create fragment objects
-ctrl.md <- read.table(file = "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/per_barcode_metrics.csv", stringsAsFactors = FALSE, sep = ",", header = TRUE, row.names = 1)
+ctrl.md <- read.table(file = PATH_BARCODE_METRICS, stringsAsFactors = FALSE, sep = ",", header = TRUE, row.names = 1)
 
 #Add fragpath
-ctrl.fragpath <- "~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/atac_fragments.tsv.gz"
+ctrl.fragpath <- PATH_ATAC_FRAGMENTS
 
 #Create fragment object
 ctrl.fragobj <- CreateFragmentObject(path = ctrl.fragpath)
@@ -50,7 +56,7 @@ ctrl <- CreateSeuratObject(ctrl.assay, assay = "ATAC", meta.data = ctrl.md, proj
 Annotation(ctrl) <- annotations
 
 #Add RNA data
-ctrl.rna <- Read10X_h5("~/hpchome/projects/2023_10X_multiomics_E15.5_murine_skin/raw_data/dnacore454.healthcare.uiowa.edu/CTRL_count/outs/filtered_feature_bc_matrix.h5")
+ctrl.rna <- Read10X_h5(PATH_RNA)
 
 #Extra step from seurat issues 7631
 ctrl_rna_names <- colnames(ctrl.rna$`Gene Expression`)
@@ -112,4 +118,4 @@ ctrl.dimplot
 ggsave("ctrl.tiff", ctrl.dimplot, height=7, width=10)
 
 #Save files
-saveRDS(ctrl, file = "~/hpchome/projects/CTRL_only/CTRL_only/Loadable Data/ctrl.rds")
+saveRDS(ctrl, file = OUTPUT_RDS)
