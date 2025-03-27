@@ -38,11 +38,10 @@ To run the code in this repository, you will need the following:
    - Use the `preprocessing.R` script to prepare the data. This script processes ATAC and RNA data, filters low-quality cells, and creates a Seurat object.
 
 ### Generating Plots
-1. **Figure Generation**:
-   - Use the `figure_generation.R` script to generate various plots, including feature plots, dot plots, volcano plots, and motif enrichment plots.
-   - Example: To generate a feature plot for a gene, use the `FeaturePlot` function and save the output using `ggsave`.
+1. **Gene Expression Visualization**:
+   - Use the `figure_generation.R` script to generate various plots to observe gene expression (feature plots, dot plots, volcano plots, and motif enrichment plots).
 
-2. **Cluster Subsetting and Visualization**:
+2. **Cluster Subsetting and Marker Visualization**:
    - Subset clusters using the `subset` function in Seurat.
    - Reorder clusters and define markers for visualization.
    - Use `DotPlot` for marker visualization and save the plots.
