@@ -39,16 +39,9 @@ To run the code in this repository, you will need the following:
 
 ### Generating Plots
 1. **Gene Expression Visualization**:
-   - Use the `figure_generation.R` script to generate various plots to observe gene expression (feature plots, dot plots, volcano plots, and motif enrichment plots).
-
-2. **Cluster Subsetting and Marker Visualization**:
-   - Subset clusters using the `subset` function in Seurat.
-   - Reorder clusters and define markers for visualization.
-   - Use `DotPlot` for marker visualization and save the plots.
-
-3. **Differential Analysis**:
-   - Perform differential analysis using the `FindMarkers` function.
-   - Visualize results with volcano plots using the `EnhancedVolcano` package.
+   - Use the `figure_generation.R` script to generate various plots to observe gene expression and chromatin accessibility data (feature plot, dot plot, volcano plot, etc.). 
+   - Example: Subset clusters and define markers for visualization. Use `DotPlot` for marker visualization and save the plots.
+   - Example: Perform differential analysis using the `FindMarkers` function. Visualize results with volcano plots using the `EnhancedVolcano` package.
 
 ### Generating BigWig Files for RNA and ATAC
 1. **Exporting BigWig Files**:
