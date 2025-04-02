@@ -1,0 +1,40 @@
+#############################
+# ATAC Bulk Populations Composite Track Group
+#############################
+track ATAC_Bulk
+compositeTrack on
+shortLabel ATAC
+longLabel Pseudobulk ATACseq Tracks
+type bigWig
+group EpidermisATACseq
+visibility full
+
+    track ATAC_Bulk_Epidermis
+    parent ATAC_Bulk
+    shortLabel Bulk Epidermis ATAC
+    longLabel Pseudobulk ATACseq of Epidermis
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506_ATAC_epidermis.bw
+    color 242,142,43
+    autoScale group
+    priority 1
+
+    track ATAC_Bulk_Dermis
+    parent ATAC_Bulk
+    shortLabel Bulk Dermis ATAC
+    longLabel Pseudobulk ATACseq of Dermis
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermis.bw
+    color 78,121,167
+    autoScale group
+    priority 2
+
+    track ATAC_Bulk_Other
+    parent ATAC_Bulk
+    shortLabel Bulk Other ATAC
+    longLabel Pseudobulk ATACseq of Other Clusters
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fother.bw
+    color 225,87,89
+    autoScale group
+    priority 3

@@ -1,0 +1,5 @@
+hub SkinTrackHub
+shortLabel Skin Hub
+longLabel A track hub with ATAC and RNA pseudobulk tracks from developing embryo mouse skin 
+genomesFile genomes.txt
+email tvarovski1@gmail.com

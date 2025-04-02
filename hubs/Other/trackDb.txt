@@ -1,0 +1,20 @@
+#############################
+# ATAC Other Composite Track Group
+#############################
+track ATAC_Other
+compositeTrack on
+shortLabel ATAC
+longLabel Pseudobulk ATACseq Tracks of Other Clusters
+type bigWig
+group OtherATACseq
+visibility full
+
+    track OtherATAC_all
+    parent ATAC_Other
+    shortLabel Other ATAC
+    longLabel Pseudobulk ATACseq of Other Clusters (all)
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fother.bw
+    color 12,47,71
+    autoScale group
+    priority 1

@@ -1,0 +1,30 @@
+#############################
+# ATAC Dermis Composite Track Group
+#############################
+track ATAC_Dermis
+compositeTrack on
+shortLabel ATAC
+longLabel Pseudobulk ATACseq Tracks
+type bigWig
+group DermisATACseq
+visibility full
+
+    track DermisATAC_all
+    parent ATAC_Dermis
+    shortLabel Dermis ATAC
+    longLabel Pseudobulk ATACseq of Dermis (all)
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermis.bw
+    color 12,47,71
+    autoScale group
+    priority 1
+
+    track DermalCondensateATAC
+    parent ATAC_Dermis
+    shortLabel Condensate ATAC
+    longLabel Pseudobulk ATACseq of Dermal Condensate
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermal%5Fcondensate.bw
+    color 89,47,76
+    autoScale group
+    priority 2

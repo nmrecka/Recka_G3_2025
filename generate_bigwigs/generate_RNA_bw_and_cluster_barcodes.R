@@ -229,17 +229,18 @@ SplitFragments(
   verbose = TRUE
 )
 
-ExportGroupBW(object = ctrl,
-              assay = 'ATAC',
-              group.by = ',seurat_clusters', # or 'combined_cluster' for combined clusters,
-              idents = NULL, #NULL [for all clusters] or list(seurat_clusters=c(21)) [for selected clusters],
-              normMethod = "RC", #"TSS.enrichment", #'ncells', 'none' or any quantitative values from @meta.data
-              tileSize = TILE_SIZE,
-              minCells = MIN_CELLS,
-              cutoff = NULL,
-              chromosome = standardChromosomes(ctrl),
-              outdir = output_dir,
-              verbose=TRUE
+ExportGroupBW(
+  object = ctrl,
+  assay = 'ATAC',
+  group.by = ',seurat_clusters', # or 'combined_cluster' for combined clusters,
+  idents = NULL, #NULL [for all clusters] or list(seurat_clusters=c(21)) [for selected clusters],
+  normMethod = "RC", #"TSS.enrichment", #'ncells', 'none' or any quantitative values from @meta.data
+  tileSize = TILE_SIZE,
+  minCells = MIN_CELLS,
+  cutoff = NULL,
+  chromosome = standardChromosomes(ctrl),
+  outdir = output_dir,
+  verbose=TRUE
 )
 
 
@@ -274,17 +275,18 @@ ctrl$combined_cluster[ctrl$seurat_clusters %in% c(2,3,5,7,8,10)] <- "epidermis"
 ctrl$combined_cluster[ctrl$seurat_clusters %in% c(0,1,4,6,9)] <- "dermis"
 ctrl$combined_cluster[ctrl$seurat_clusters %in% c(11,12,13,14,15,16,17,19,20,21,22)] <- "other"
 
-ExportGroupBW(object = ctrl,
-              assay = 'ATAC',
-              group.by = 'combined_cluster', # or 'seurat_clusters' for individual clusters,
-              idents = NULL, #NULL [for all clusters] or list(seurat_clusters=c(21)) [for selected clusters],
-              normMethod = "RC", #"TSS.enrichment", #'ncells', 'none' or any quantitative values from @meta.data
-              tileSize = TILE_SIZE,
-              minCells = MIN_CELLS,
-              cutoff = NULL,
-              chromosome = standardChromosomes(ctrl),
-              outdir = output_dir,
-              verbose=TRUE
+ExportGroupBW(
+  object = ctrl,
+  assay = 'ATAC',
+  group.by = 'combined_cluster', # or 'seurat_clusters' for individual clusters,
+  idents = NULL, #NULL [for all clusters] or list(seurat_clusters=c(21)) [for selected clusters],
+  normMethod = "RC", #"TSS.enrichment", #'ncells', 'none' or any quantitative values from @meta.data
+  tileSize = TILE_SIZE,
+  minCells = MIN_CELLS,
+  cutoff = NULL,
+  chromosome = standardChromosomes(ctrl),
+  outdir = output_dir,
+  verbose=TRUE
 )
 
 # save the barcodes of each combined cluster

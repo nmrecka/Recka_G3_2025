@@ -58,12 +58,13 @@ head(deg.basalvspinous.ATAC)
 write.csv(deg.basalvspinous.ATAC, file = "deg.basalvspinous.ATAC.csv")
 
 #Volcano Plot Visualization
-volcano_dac_basalvspinous <- EnhancedVolcano(deg.basalvspinous.ATAC, 
-                                             rownames(deg.basalvspinous.ATAC),
-                                             x ="avg_log2FC", 
-                                             y ="p_val", 
-                                             FCcutoff = 0.1, 
-                                             labSize = 5)
+volcano_dac_basalvspinous <- EnhancedVolcano(
+  deg.basalvspinous.ATAC, 
+  rownames(deg.basalvspinous.ATAC),
+  x ="avg_log2FC", 
+  y ="p_val", 
+  FCcutoff = 0.1, 
+  labSize = 5)
 volcano_dac_basalvspinous
 ggsave("volcano_dac_basalvspinous.tiff", width = 10, height = 10, units = c("in"), dpi = 300)
 

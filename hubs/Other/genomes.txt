@@ -1,0 +1,2 @@
+genome mm10
+trackDb trackDb.txt
