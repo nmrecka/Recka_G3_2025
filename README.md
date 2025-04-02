@@ -46,7 +46,8 @@ To run the code in this repository, you will need the following:
 ### Generating BigWig Files for RNA and ATAC
 1. **Exporting BigWig Files**:
    - Use the `generate_RNA_bw_and_cluster_barcodes.R` script to export BigWig files for RNA and ATAC data. The `ExportGroupBW` function is used for this purpose.
-   - For ATAC data, ensure the default assay is set to "ATAC" and use the `SplitFragments` function to split fragments by clusters before exporting.
+   - For ATAC data, the BigWig files can be generated directly in R. Ensure the default assay is set to "ATAC" and use the `SplitFragments` function to split fragments by clusters before exporting.
+   - For RNA-seq data, first, cell barcodes corresponding to clusters need to be exported and then used to create bam files for individual clusters. Lastly, bam files are converted to BigWig through `normalize_bam_to_bw.sh` script.
 
 2. **Normalizing BAM to BigWig**:
    - Use the `normalize_bam_to_bw.sh` script to normalize BAM files and generate BigWig files. Example usage:
