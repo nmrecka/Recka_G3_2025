@@ -9,13 +9,13 @@ type bigWig
 group DermisATACseq
 visibility full
 
-    track DermisATAC_all
+    track DermalCondensateATAC
     parent ATAC_Dermis
-    shortLabel Dermis ATAC
-    longLabel Pseudobulk ATACseq of Dermis (all)
+    shortLabel Condensate ATAC
+    longLabel Pseudobulk ATACseq of Dermal Condensate
     type bigWig
-    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermis.bw
-    color 12,47,71
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermal%5Fcondensate.bw
+    color 89,47,76
     autoScale group
     priority 1
 
@@ -35,16 +35,6 @@ visibility full
     longLabel Pseudobulk ATACseq of Lower Dermis
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Flower%5Fdermis.bw
-    color 0, 255, 255
+    color 12,47,71
     autoScale group
     priority 3
-
-    track DermalCondensateATAC
-    parent ATAC_Dermis
-    shortLabel Condensate ATAC
-    longLabel Pseudobulk ATACseq of Dermal Condensate
-    type bigWig
-    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fdermal%5Fcondensate.bw
-    color 89,47,76
-    autoScale group
-    priority 4
