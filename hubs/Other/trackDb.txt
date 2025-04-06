@@ -15,7 +15,7 @@ visibility full
     longLabel Pseudobulk ATACseq Melanocytes
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fmelanocyte.bw
-    color 165, 42, 42
+    color 101, 67, 33
     autoScale group
     priority 1
 
