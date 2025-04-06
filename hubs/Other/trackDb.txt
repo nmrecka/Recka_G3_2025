@@ -15,7 +15,7 @@ visibility full
     longLabel Pseudobulk ATACseq Melanocytes
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fmelanocyte.bw
-    color 12,47,71
+    color 165, 42, 42
     autoScale group
     priority 1
 
@@ -25,7 +25,7 @@ visibility full
     longLabel Pseudobulk ATACseq of Schwann Cells
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fschwann.bw
-    color 12,47,71
+    color 173, 216, 230
     autoScale group
     priority 2
 
@@ -35,7 +35,7 @@ visibility full
     longLabel Pseudobulk ATACseq of Macrophages
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fmacro.bw
-    color 12,47,71
+    color 128, 128, 128
     autoScale group
     priority 3
 
@@ -45,7 +45,7 @@ visibility full
     longLabel Pseudobulk ATACseq of Immune Cells
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fimmune.bw
-    color 12,47,71
+    color 0, 100, 0
     autoScale group
     priority 4
 
@@ -55,7 +55,7 @@ visibility full
     longLabel Pseudobulk ATACseq of Pericytes
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fpericyte.bw
-    color 12,47,71
+    color 128, 0, 128
     autoScale group
     priority 5
 
@@ -65,7 +65,7 @@ visibility full
     longLabel Pseudobulk ATACseq of Blood Cells
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fblood.bw
-    color 12,47,71
+    color 255, 0, 0
     autoScale group
     priority 6
 
@@ -75,6 +75,6 @@ visibility full
     longLabel Pseudobulk ATACseq of Vascular Cells
     type bigWig
     bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fvessel.bw
-    color 12,47,71
+    color 128, 0, 0
     autoScale group
     priority 7
