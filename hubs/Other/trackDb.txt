@@ -9,12 +9,72 @@ type bigWig
 group OtherATACseq
 visibility full
 
-    track OtherATAC_all
+    track MelanocyteATAC
     parent ATAC_Other
-    shortLabel Other ATAC
-    longLabel Pseudobulk ATACseq of Other Clusters (all)
+    shortLabel Melanocyte ATAC
+    longLabel Pseudobulk ATACseq Melanocytes
     type bigWig
-    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fother.bw
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fmelanocyte.bw
     color 12,47,71
     autoScale group
     priority 1
+
+    track SchwannATAC
+    parent ATAC_Other
+    shortLabel Schwann ATAC
+    longLabel Pseudobulk ATACseq of Schwann Cells
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fschwann.bw
+    color 12,47,71
+    autoScale group
+    priority 2
+
+    track MacrophageATAC
+    parent ATAC_Other
+    shortLabel Macrophage ATAC
+    longLabel Pseudobulk ATACseq of Macrophages
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fmacro.bw
+    color 12,47,71
+    autoScale group
+    priority 3
+
+    track ImmuneATAC
+    parent ATAC_Other
+    shortLabel Immune ATAC
+    longLabel Pseudobulk ATACseq of Immune Cells
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fimmune.bw
+    color 12,47,71
+    autoScale group
+    priority 4
+
+    track PericyteATAC
+    parent ATAC_Other
+    shortLabel Pericyte ATAC
+    longLabel Pseudobulk ATACseq of Pericytes
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fpericyte.bw
+    color 12,47,71
+    autoScale group
+    priority 5
+
+    track BloodATAC
+    parent ATAC_Other
+    shortLabel Blood ATAC
+    longLabel Pseudobulk ATACseq of Blood Cells
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fblood.bw
+    color 12,47,71
+    autoScale group
+    priority 6
+
+    track VesselATAC
+    parent ATAC_Other
+    shortLabel Vessel ATAC
+    longLabel Pseudobulk ATACseq of Vascular Cells
+    type bigWig
+    bigDataUrl https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8833nnn/GSM8833506/suppl/GSM8833506%5FATAC%5Fvessel.bw
+    color 12,47,71
+    autoScale group
+    priority 7
